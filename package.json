@@ -27,8 +27,11 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
   },
+  "gypfile":true,
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
@@ -37,10 +40,13 @@
     "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "typescript-eslint": "^8.56.1",
+    "node-gyp": "^10.0.0",
+    "node-addon-api": "^7.1.0"
   },
   "dependencies": {
     "node-addon-api": "^8.7.0",
     "node-api": "^0.0.1"
   }
+  
 }

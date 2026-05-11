@@ -1,20 +1,22 @@
-#include "include/moonshine-cpp.h"
+#pragma once
+#include "process.h"
 
-class Procceser : public moonshine::TranscriptEventListener{
-public:
-    Procceser(){
+Processer::Processer():Callback(nullptr){
 
-    }
-    void onLineCompleted(const moonshine::LineCompleted &event) override{
+}
+void Processer::onLineCompleted(const moonshine::LineCompleted &event){
+    if(!Callback)return;
+    Callback->Call({Napi::String::New(Callback->Env(),event.line.text)});
+}
+void Processer::onLineStarted(const moonshine::LineStarted &event){
+    
+}
+void Processer::onLineUpdated(const moonshine::LineUpdated &event){
+    
+}
+void Processer::onLineTextChanged(const moonshine::LineTextChanged &event){
+    
+}
+void Processer::LoadMutationFile(const std::string file_name){
 
-    }
-    void onLineStarted(const moonshine::LineStarted &event) override{
-        
-    }
-    void onLineUpdated(const moonshine::LineUpdated &event) override{
-        
-    }
-    void onLineTextChanged(const moonshine::LineTextChanged &event) override{
-        
-    }
-};
+}
