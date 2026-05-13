@@ -495,20 +495,11 @@
       "deps/amaro/dist/index.js"
     ],
     "ossfuzz": "false",
-    "nodedir": "C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\24.15.0",
+    "nodedir": "C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\22.22.1",
     "python": "C:\\Users\\riley\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
     "standalone_static_library": 1,
     "msbuild_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe",
-    "user_agent": "npm/11.12.1 node/v24.15.0 win32 x64 workspaces/false",
-    "userconfig": "C:\\Users\\riley\\.npmrc",
-    "prefix": "C:\\Users\\riley\\AppData\\Roaming\\npm",
-    "npm_version": "11.12.1",
-    "node_gyp": "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js",
-    "local_prefix": "C:\\Users\\riley\\Desktop\\C++\\projects\\cripplecaptions",
-    "init_module": "C:\\Users\\riley\\.npm-init.js",
-    "global_prefix": "C:\\Users\\riley\\AppData\\Roaming\\npm",
-    "globalconfig": "C:\\Users\\riley\\AppData\\Roaming\\npm\\etc\\npmrc",
-    "cache": "C:\\Users\\riley\\AppData\\Local\\npm-cache"
+    "target": "22.22.1"
   },
   "target_defaults": {
     "include_dirs": [],

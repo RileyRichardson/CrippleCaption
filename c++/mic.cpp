@@ -1,9 +1,10 @@
+#define MINIAUDIO_IMPLEMENTATION
 #include "mic.h"
 void data_callback(ma_device* device, void* output, const void* input,ma_uint32 frameCount) {
     ((moonshine::Transcriber*)(device->pUserData))->addAudio((const float*)input,frameCount);
 }
 
-MicTranscriber::MicTranscriber(moonshine::TranscriptEventListener* p):transcriber("models/english", moonshine::ModelArch::MEDIUM_STREAMING, 0.0),config(ma_device_config_init(ma_device_type_capture)),running(false){
+MicTranscriber::MicTranscriber(moonshine::TranscriptEventListener* p,std::string model_path):transcriber(model_path, moonshine::ModelArch::MEDIUM_STREAMING, 0.0),config(ma_device_config_init(ma_device_type_capture)),running(false){
     config.capture.format   = ma_format_f32;
     config.capture.channels = 1;
     config.sampleRate       = 16000;

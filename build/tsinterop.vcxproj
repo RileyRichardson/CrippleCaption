@@ -48,13 +48,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\node_modules\node-addon-api;$(ProjectDir)\c++;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\src;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/Zc:__cplusplus -std:c++20 /Zm2000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\node_modules\node-addon-api;$(ProjectDir)\c++;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\src;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus -std:c++20 /Zm2000 /MD %(AdditionalOptions)</AdditionalOptions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <MinimalRebuild>false</MinimalRebuild>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <OmitFramePointers>false</OmitFramePointers>
@@ -72,7 +73,7 @@
       <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <Link>
-      <AdditionalDependencies>moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;ws2_32.lib;legacy_stdio_definitions.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;delayimp.lib;&quot;C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\24.15.0\\x64\\node.lib&quot;;moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;ws2_32.lib;legacy_stdio_definitions.lib</AdditionalDependencies>
+      <AdditionalDependencies>moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;moonshine_tts_core.lib;moonshine_tts_ort.lib;moonshine_tts_utf8proc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;delayimp.lib;&quot;C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\22.22.1\\x64\\node.lib&quot;;moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;moonshine_tts_core.lib;moonshine_tts_ort.lib;moonshine_tts_utf8proc.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)\c++\lib;..\c++\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
       <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
@@ -85,14 +86,14 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\src;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\src;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=tsinterop;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;_GLIBCXX_USE_CXX11_ABI=1;_FILE_OFFSET_BITS=64;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;NOMINMAX;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;DEBUG;_DEBUG;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\node_modules\node-addon-api;$(ProjectDir)\c++;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\src;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/Zc:__cplusplus -std:c++20 /Zm2000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\node_modules\node-addon-api;$(ProjectDir)\c++;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\src;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:__cplusplus -std:c++20 /Zm2000 /MD %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -101,6 +102,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <OmitFramePointers>true</OmitFramePointers>
       <Optimization>Full</Optimization>
@@ -118,7 +120,7 @@
       <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <Link>
-      <AdditionalDependencies>moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;ws2_32.lib;legacy_stdio_definitions.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;delayimp.lib;&quot;C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\24.15.0\\x64\\node.lib&quot;;moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;ws2_32.lib;legacy_stdio_definitions.lib</AdditionalDependencies>
+      <AdditionalDependencies>moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;moonshine_tts_core.lib;moonshine_tts_ort.lib;moonshine_tts_utf8proc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;delayimp.lib;&quot;C:\\Users\\riley\\AppData\\Local\\node-gyp\\Cache\\22.22.1\\x64\\node.lib&quot;;moonshine.lib;onnxruntime.lib;bin-tokenizer.lib;moonshine-utils.lib;ort-utils.lib;moonshine_tts_core.lib;moonshine_tts_ort.lib;moonshine_tts_utf8proc.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)\c++\lib;..\c++\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
       <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
@@ -131,7 +133,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\src;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\24.15.0\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\include\node;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\src;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\config;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\openssl\openssl\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\uv\include;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\zlib;C:\Users\riley\AppData\Local\node-gyp\Cache\22.22.1\deps\v8\include;C:\Users\riley\Desktop\C++\projects\cripplecaptions\node_modules\node-addon-api;..\c++;..\c++\include;..\node_modules\node-addon-api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=tsinterop;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;_GLIBCXX_USE_CXX11_ABI=1;_FILE_OFFSET_BITS=64;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;NOMINMAX;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
@@ -148,7 +150,15 @@
     <ClCompile Include="..\c++\mic.cpp">
       <ObjectFileName>$(IntDir)\c++\mic.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+    <ClCompile Include="C:\Users\riley\AppData\Roaming\npm\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\c++\lib\onnxruntime.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\c++\lib\onnxruntime.dll&quot; &quot;$(OutDir)onnxruntime.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying c++/lib/onnxruntime.dll to $(OutDir)</Message>
+      <Outputs>$(OutDir)\onnxruntime.dll</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
   <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>

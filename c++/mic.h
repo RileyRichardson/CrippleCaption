@@ -11,7 +11,7 @@ class MicTranscriber{
     bool running;
     bool init = false;
 public:
-    MicTranscriber(moonshine::TranscriptEventListener* p);
+    MicTranscriber(moonshine::TranscriptEventListener* p,std::string model_path);
     ~MicTranscriber();
     void Start();
     void Stop();

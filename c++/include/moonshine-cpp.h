@@ -1,6 +1,7 @@
 #ifndef MOONSHINE_CPP_H
 #define MOONSHINE_CPP_H
 
+#include <fstream>
 /* Moonshine C++ API - Header-only library
  *
  * This is a C++11 wrapper around the Moonshine C API, providing a modern
@@ -239,7 +240,7 @@ class TranscriptEvent {
     LINE_UPDATED,
     LINE_TEXT_CHANGED,
     LINE_COMPLETED,
-    ERROR
+    ERROR_EVENT
   };
 
   /// The transcript line associated with this event
@@ -293,12 +294,12 @@ class Error : public TranscriptEvent {
   std::string errorMessage;
 
   Error(const std::string &errorMessage, int32_t streamHandle)
-      : TranscriptEvent(TranscriptLine(), streamHandle, ERROR),
+      : TranscriptEvent(TranscriptLine(), streamHandle, ERROR_EVENT),
         errorMessage(errorMessage) {}
 
   Error(const std::string &errorMessage, const TranscriptLine &line,
         int32_t streamHandle)
-      : TranscriptEvent(line, streamHandle, ERROR),
+      : TranscriptEvent(line, streamHandle, ERROR_EVENT),
         errorMessage(errorMessage) {}
 };
 
@@ -974,7 +975,7 @@ inline void Stream::emit(const TranscriptEvent &event) {
         case TranscriptEvent::LINE_COMPLETED:
           listener->onLineCompleted(static_cast<const LineCompleted &>(event));
           break;
-        case TranscriptEvent::ERROR:
+        case TranscriptEvent::ERROR_EVENT:
           listener->onError(static_cast<const Error &>(event));
           break;
       }
@@ -1040,17 +1041,12 @@ inline void Stream::emitError(const std::string &errorMessage) {
   Error errorEvent(errorMessage, handle_);
   emit(errorEvent);
 }
-
 // Transcriber implementation
 inline Transcriber::Transcriber(const std::string &modelPath,
-                                ModelArch modelArch, double updateInterval)
-    : handle_(-1),
-      modelPath_(modelPath),
-      modelArch_(modelArch),
-      updateInterval_(updateInterval) {
-  handle_ = moonshine_load_transcriber_from_files(
-      modelPath.c_str(), static_cast<uint32_t>(modelArch), nullptr, 0,
-      MOONSHINE_HEADER_VERSION);
+                                ModelArch modelArch, double updateInterval):
+                                   handle_(-1),modelPath_(modelPath),modelArch_(modelArch),updateInterval_(updateInterval) {
+                                    
+  handle_ = moonshine_load_transcriber_from_files(modelPath.c_str(), static_cast<uint32_t>(modelArch), nullptr, 0,MOONSHINE_HEADER_VERSION);
   checkError(handle_);
 }
 

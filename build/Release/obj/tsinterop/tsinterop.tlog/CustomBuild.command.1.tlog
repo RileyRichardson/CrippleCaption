@@ -1,0 +1,3 @@
+^C:\USERS\RILEY\DESKTOP\C++\PROJECTS\CRIPPLECAPTIONS\C++\LIB\ONNXRUNTIME.DLL
+call mkdir "C:\Users\riley\Desktop\C++\projects\cripplecaptions\build\Release\" 2>nul & set ERRORLEVEL=0 & copy /Y "..\c++\lib\onnxruntime.dll" "C:\Users\riley\Desktop\C++\projects\cripplecaptions\build\Release\onnxruntime.dll"
+if %errorlevel% neq 0 exit /b %errorlevel%
