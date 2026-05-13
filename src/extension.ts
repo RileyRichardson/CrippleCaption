@@ -20,7 +20,6 @@ export function activate(context: vscode.ExtensionContext) {
 			Transcribing = true;
 		}
 	});
- 
 	context.subscriptions.push(disposable);
 }
 
